@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITB Rocket Team</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Current Endeavors</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#join">Join the Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="overlay">
+            <h1>Welcome to IITB Rocket Team</h1>
+            <p>Pioneering innovation in aerospace engineering and rocketry</p>
+            <a href="#join" class="cta-button">Join the Team</a>
+            <a href="#sponsors" class="cta-button">Sponsor Us</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>The IITB Rocket Team is a student-run organization focused on building rockets for international competitions...</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Current Endeavors</h2>
+        <div class="project">
+            <h3>Project Falcon</h3>
+            <p>Our latest high-altitude rocket designed for intercollegiate rocket competitions.</p>
+        </div>
+        <div class="project">
+            <h3>Project Phoenix</h3>
+            <p>A reusable rocket prototype we are currently testing.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="team1.jpg" alt="Team Member 1">
+            <h4>John Doe</h4>
+            <p>Team Lead</p>
+        </div>
+        <!-- More team members -->
+    </section>
+
+    <section id="sponsors">
+        <h2>Our Sponsors</h2>
+        <div class="sponsor">
+            <img src="sponsor-logo1.png" alt="Sponsor 1">
+        </div>
+        <div class="sponsor">
+            <img src="sponsor-logo2.png" alt="Sponsor 2">
+        </div>
+    </section>
+
+    <section id="join">
+        <h2>Join the Team</h2>
+        <p>We are looking for passionate students in the fields of aerospace, mechanical, electronics, and more...</p>
+        <form action="/submit_application" method="POST">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Why do you want to join?"></textarea>
+            <button type="submit">Apply</button>
+        </form>
+    </section>
+
+    <footer>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: contact@iitbrocketteam.in</p>
+        </section>
+        <p>&copy; 2024 IITB Rocket Team. All rights reserved.</p>
+    </footer>
+
+</body>
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent page reload
+      const formData = new FormData(this);
+      
+      fetch('/submit_application', {
+          method: 'POST',
+          body: formData
+      }).then(response => response.text())
+        .then(data => {
+            alert(data); // Show success message
+        }).catch(error => {
+            console.error('Error:', error);
+        });
+  });
+</script>
+
+</html>

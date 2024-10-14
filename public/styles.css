@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #001f3f;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-section {
+    background: url('hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-section .overlay {
+    text-align: center;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background: #ff6b35;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#about, #projects, #team, #sponsors, #join, #contact {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#about h2, #projects h2, #team h2, #sponsors h2, #join h2, #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project, .team-member, .sponsor {
+    display: inline-block;
+    margin: 1rem;
+}
+
+.team-member img, .sponsor img {
+    max-width: 100px;
+    height: auto;
+}
+
+footer {
+    background: #001f3f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
